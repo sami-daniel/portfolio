@@ -16,7 +16,6 @@ body{
     background-color: #E1F7FF;
 }
 header, footer, section{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,10 +27,12 @@ header, footer, section{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .father_75_per{
     width: 75%;
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 ._navmenu{
@@ -43,6 +44,7 @@ header, footer, section{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 1280px;
 }
 ._navmenu ul > li:nth-child(1){
     color: #C1B416;
@@ -51,6 +53,24 @@ header, footer, section{
     display: flex;
     justify-content: center;
     margin-top: 6.15%;
+    margin-bottom: 2.15%;
+}
+
+.button_dowload_cv{
+    position: relative;
+    width: 25% !important;
+    margin-top: 3vh;
+    text-align: center;
+    line-height: 5vh;
+    height: 5vh;
+    font-weight: 700;
+    border-radius: 30px;
+    max-width: 300px;
+    background-color: #C1B416;
+}
+
+._text_informat > div:nth-child(1){
+    position: relative;
 }
 
 ._text_informat > div{
@@ -68,8 +88,8 @@ header, footer, section{
     text-align: center;
 }
 ._text_informat{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 ._text_informat h2{
@@ -78,10 +98,16 @@ header, footer, section{
     text-align: center;
 }
 
+._text_informat h6{
+    font-size: 14px;
+}
+
 ._text_informat p{
     font-weight: 600;
     font-size: 12px;
     text-align: center;
+    margin: 0 auto;
+    max-width: 512px;
 }
 ._pAbsolute_img_first{
     position: absolute;
