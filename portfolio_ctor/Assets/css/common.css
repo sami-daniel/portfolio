@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    color: currentColor;
+}
+body{
+    background-color: #E1F7FF;
+}
+header, footer, section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.father_75_per{
+    width: 75%;
+    position: relative;
+}
+
+._navmenu{
+    margin-top: 1.15%;
+}
+._navmenu ul{
+    text-transform: uppercase;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+._navmenu ul > li:nth-child(1){
+    color: #C1B416;
+}
+.logo_image{
+    display: flex;
+    justify-content: center;
+    margin-top: 6.15%;
+}
+
+._text_informat > div{
+    width: 49%;
+}
+
+._text_informat h3{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+._text_informat h6{
+    margin-top: 2.5%;
+    margin-bottom: 1.5%;
+    text-align: center;
+}
+._text_informat{
+    display: flex;
+    justify-content: center;
+}
+
+._text_informat h2{
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+._text_informat p{
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+}
+._pAbsolute_img_first{
+    position: absolute;
+    z-index: -10;
+    
+}
+
+._pAbsolute_img_first:nth-child(1){
+    top: 45%;
+    transform: rotate(15deg);
+    left: 10%;
+}
