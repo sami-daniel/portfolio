@@ -9,6 +9,7 @@ let h1_1_span = document.querySelector('.lighter_span_la')
 let description_p = document.querySelector('._lightbox>div:last-child p')
 
 starter.addEventListener('click', () => {
+
     overlay.classList.add('entry_overlay')
     body.style.overflowY = 'hidden'
     newMainScreen.classList.add('entry_ligth_configs')
@@ -18,7 +19,8 @@ starter.addEventListener('click', () => {
         'Assets/imgs/imgs/lose_screen.png'
     ]
     StartLightBox('BLACK JACK', 'C# .NET FRAMEWORK', 'rgb(207, 1, 207)', 'O jogo de 21, também conhecido como blackjack, é um dos jogos de cartas mais populares em cassinos e' +
-        'também pode ser jogado em casa ou online. O objetivo do jogo é ter uma mão com um valor total de 21 pontos, ou o mais próximo possível deste número, sem ultrapassá-lo. Mais em ', 'gihub.com/sami-daniel', 'https://github.com/sami-daniel/sami-daniel', imgsLinks)
+        'também pode ser jogado em casa ou online. O objetivo do jogo é ter uma mão com um valor total de 21 pontos, ou o mais próximo possível deste número, sem ultrapassá-lo.'+
+         'Mais em ', 'gihub.com/sami-daniel', 'https://github.com/sami-daniel/sami-daniel', imgsLinks)
 })
 
 btnClose.addEventListener('click', () => {
@@ -35,6 +37,7 @@ function StartLightBox(textTitle, spanTextTitle, spanStyleColor, descriptionCont
     const link = document.createElement('a');
     link.textContent = linkName
     link.href = linkhref
+    link.target = '_blank'
     description_p.textContent += link.textContent;
     for (var i = 0; i < 3; i++) {
         imgsCarousselBootstrap[i].src = imgsLinks[i];

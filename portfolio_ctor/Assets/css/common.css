@@ -39,12 +39,15 @@ body {
 
 ._snapper {
     display: grid;
-    grid-template-rows: 0.05fr 1fr 1fr;
+    grid-template-rows: 0.05fr 1fr;
 }
 
 article {
     min-height: 100vh;
     scroll-snap-align: start;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 header,
@@ -72,9 +75,16 @@ header {
 .father_75_per {
     width: 75%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
-
+.Justify_center{
+    justify-content: center;
+}
+._art_text{
+    padding: 10rem;
+    align-items: flex-start !important;
+}
 ._navmenu {
     position: fixed;
     top: 0;
@@ -101,8 +111,7 @@ header {
 .logo_image {
     display: flex;
     justify-content: center;
-    margin-top: 6.15%;
-    margin-bottom: 2.15%;
+    margin-bottom: 8.15%;
 }
 
 .button_dowload_cv {
@@ -213,7 +222,6 @@ header {
 
 ._container_hard {
     width: 100%;
-    padding-top: 7.5rem;
 }
 
 ._container_hard>div {
@@ -225,7 +233,6 @@ header {
     grid-template-rows: 1fr 1fr 1fr 0.5fr 0.01fr;
     max-width: 1280px;
     gap: 5%;
-    transform: translateY(15%);
 }
 
 ._container_hard>div>div:first-child {

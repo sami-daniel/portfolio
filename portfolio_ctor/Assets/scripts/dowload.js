@@ -5,6 +5,7 @@ dowloadButton.forEach(e => {
   e.addEventListener('click', () => {
     const link = document.createElement('a');
     link.href = pdfUrl;
+    link.target = '_blank'
     link.click();
   });
 });
