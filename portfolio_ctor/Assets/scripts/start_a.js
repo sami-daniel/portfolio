@@ -8,5 +8,6 @@ for (let i = 0; i < a_elements.length; i++) {
 
 for (let i = 0; i < hrefValue.length; i++) {
     if (!(hrefValue[i].startsWith('#'))) {
+        a_elements[i].target = '_blank'
     }
 }
