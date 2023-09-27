@@ -3,35 +3,57 @@ const secondArt = document.getElementById('second_art')
 const thirdArt = document.getElementById('third_art')
 const forthyArt = document.getElementById('forthy_art')
 const fiveArt = document.getElementById('five_art')
-let menuSelectors = document.querySelectorAll('.ul_selector li')
 const spanFirstMenu = document.getElementById('spanFirstMenu')
-function IsElementInViewport(element) {
-    if (element.tagName.toLowerCase() !== 'article') {
-        throw new Error('O elemento não é um <article>.');
+const spanSecondMenu = document.getElementById('spanSecondMenu')
+const spanThirdMenu = document.getElementById('spanThirdMenu')
+const spanForthyMenu = document.getElementById('spanForthyMenu')
+const spanFiveMenu = document.getElementById('spanFiveMenu')
+
+window.addEventListener('scroll', () => {
+    if (isElementInViewport(firstArt)) {
+        changeSelectedMenu(spanFirstMenu)
+        return
     }
-    const rect = element.getBoundingClientRect();
-
-    return rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-}
-
-window.addEventListener('scroll', ()=>{
-    if(IsElementInViewport(firstArt)) {
-        ChangeColor(spanFirstMenu)
+    if (isElementInViewport(secondArt)) {
+        changeSelectedMenu(spanSecondMenu)
+        return
+    }
+    if (isElementInViewport(thirdArt)) {
+        changeSelectedMenu(spanThirdMenu)
+        return
+    }
+    if (isElementInViewport(forthyArt)) {
+        changeSelectedMenu(spanForthyMenu)
+        return
+    }
+    if (isElementInViewport(fiveArt)) {
+        changeSelectedMenu(spanFiveMenu)
+        return
     }
 })
 
-function ChangeColor(elemento){
-    if (!(elemento instanceof HTMLSpanElement)) {
-        throw new Error('O elemento não é um <span>.');
-    }
+function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    return (
+        (rect.top + rect.height / 2) >= 0 &&
+        (rect.left + rect.width / 2) >= 0 &&
+        (rect.bottom - rect.height / 2) <= windowHeight &&
+        (rect.right - rect.width / 2) <= windowWidth
+    );
+}
+
+function changeSelectedMenu(spanElement){
+    let menuSelectors = document.querySelectorAll('.ul_selector > li > a > span')
+
     menuSelectors.forEach(element =>{
-        if(element.classList.contains("_colored_selecter")){
-            element.classList.remove("_colored_selecter")
-            
+        if(element.classList.contains('_colored_selecter')){
+            element.classList.remove('_colored_selecter')
+            element.removeAttribute('class')
+            return
         }
     })
-    elemento.classList.add("_colored_selecter")
+    spanElement.classList.add('_colored_selecter')
 }

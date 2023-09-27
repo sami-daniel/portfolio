@@ -17,7 +17,9 @@
     transition: color 0.3s;
 }
 
-
+._colored_selecter{
+    color: #E5D40F !important;
+}
 
 html {
     scroll-snap-type: y mandatory;
@@ -73,7 +75,9 @@ header {
     width: 100%;
 }
 
-
+.ul_selector li span{
+    transition: 0.5s;
+}
 .father_75_per {
     width: 75%;
     display: flex;
@@ -416,7 +420,7 @@ section div:first-child h2{
     transition: 0.5s;
     min-height: 226px;
 }
-@media (min-width:1280px){
+@media (max-width:1280px){
     ._art_text{
         padding: 3.5rem;
     }
@@ -424,7 +428,7 @@ section div:first-child h2{
         min-height: 100px;
     }
     ._lightbox{
-        min-width: 95%;
+        min-width: 95% !important;
     }
 }
 /*@media (min-width:2560px){
