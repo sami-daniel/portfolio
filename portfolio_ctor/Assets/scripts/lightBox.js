@@ -8,6 +8,7 @@ const starterPortfolio = document.querySelector('.starter_lgtBox_port')
 let h1_1 = document.querySelector('.titleProject_Ligther')
 let h1_1_span = document.querySelector('.lighter_span_la')
 let description_p = document.querySelector('._lightbox>div:last-child p')
+let aTag = document.getElementById('tagA_lightbox')
 
 starterHardSkill.addEventListener('click', () => {
     StartLightBox()
@@ -22,8 +23,8 @@ starterHardSkill.addEventListener('click', () => {
     let descriptionContent = 'O jogo de 21, também conhecido como blackjack, é um dos jogos de cartas mais populares em cassinos e' +
         'também pode ser jogado em casa ou online. O objetivo do jogo é ter uma mão com um valor total de 21 pontos, ou o mais próximo possível deste número, sem ultrapassá-lo.' +
         'Mais em '
-    let linkName = 'gihub.com/sami-daniel'
-    let linkhref = 'https://github.com/sami-daniel/sami-daniel'
+    let linkName = '@gihub.com/sami-daniel'
+    let linkhref = 'https://github.com/sami-daniel?tab=repositories&q=&type=&language=c%23&sort='
     ConfigLightBox(title, spanTextTitle, spanStyleColor, descriptionContent, linkName, linkhref, imgsLinks)
 })
 
@@ -37,8 +38,8 @@ starterPortfolio.addEventListener('click', () => {
     let title = 'PROJETOS FRONT-END'
     let spanTextTitle = 'HTML & JAVASCRIPT'
     let spanStyleColor = 'rgb(127, 0, 127)'
-    let descriptionContent = 'Aqui estão alguns projetos de desenvolvimento web que fiz durante minha etapa de aprendizado. São meramente ilustrativos e não têm fins lucrativos, embora representem outros sites que também são significativos. Embora não seja meu foco principal, os frameworks e técnicas de desenvolvimento web são muito importantes para o crescimento profissional de um "Desenvolvedor".'
-    ConfigLightBox(title, spanTextTitle, spanStyleColor, descriptionContent, "", "#", imgsLinks)
+    let descriptionContent = 'Aqui estão alguns projetos de desenvolvimento web que fiz durante minha etapa de aprendizado. São meramente ilustrativos e não têm fins lucrativos, porém representam outros sites que também são significativos. Embora não seja meu foco principal, os frameworks e técnicas de desenvolvimento web são muito importantes para o crescimento profissional de um "Desenvolvedor".'
+    ConfigLightBox(title, spanTextTitle, spanStyleColor, descriptionContent, "@github.com/sami-daniel", "https://github.com/sami-daniel?tab=repositories&q=&type=&language=html&sort=", imgsLinks)
 })
 btnClose.addEventListener('click', () => {
     overlay.classList.remove('entry_overlay')
@@ -56,11 +57,8 @@ function ConfigLightBox(textTitle, spanTextTitle, spanStyleColor, descriptionCon
     h1_1_span.textContent = spanTextTitle
     h1_1_span.style.color = spanStyleColor
     description_p.textContent = descriptionContent
-    const link = document.createElement('a');
-    link.textContent = linkName
-    link.href = linkhref
-    link.target = '_blank'
-    description_p.textContent += link.textContent;
+    aTag.innerHTML = linkName
+    aTag.href = linkhref
     for (var i = 0; i < 3; i++) {
         imgsCarousselBootstrap[i].src = imgsLinks[i];
     }
