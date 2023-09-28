@@ -15,6 +15,8 @@
     <script defer src="Assets/scripts/dowload.js"></script>
     <script defer src="Assets/scripts/start_a.js"></script>
     <script async src="Assets/scripts/menuConfig.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="Assets/scripts/sendEmail.js"></script>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
                 <li>
                     <a href="#first_art"><span id="spanFirstMenu" class="_colored_selecter">ínicio</span></a>
                 </li>
-                
+
                 <li>
                     <a href="#second_art"><span id="spanSecondMenu" class="">hard skills</span></a>
                 </li>
@@ -35,10 +37,7 @@
                     <a href="#forthy_art"><span id="spanForthyMenu" class="">feedbacks</span></a>
                 </li>
                 <li>
-                    <a href="#five_art"><span id="spanFiveMenu" class="">experiência</span></a>
-                </li>
-                <li>
-                    <span>contato</span>
+                    <a href="#five_art"><span id="spanFiveMenu" class="">contato</span></a>
                 </li>
             </ul>
         </div>
@@ -77,7 +76,7 @@
                     <div>
                         <h2>SAMI DANIEL SANTOS SILVA</h2>
                         <h3>DEVELOPER BACK-END</h3>
-                        <h6><a style="text-decoration: underline;" href="#oi">samidaniel125@gmail.com</a></h6>
+                        <h6><a style="text-decoration: underline;" href="#five_art">samidaniel125@gmail.com</a></h6>
                         <p>Sami, um aluno do Ensino Médio apaixonado por programação, está determinado a encontrar um
                             estágio que lhe permita aplicar sua exímia dedicação e sua inesgotável sede de aprendizado.
                             Ele
@@ -113,8 +112,9 @@
                     </div>
                     <P style="font-weight: 800;">Jogo de 21 no c#. Clique na imagem para mais</P>
                 </div>
-                <div>
-                    <div id="button_hard_skill_contact" class="button_dowload_cv dowload_button">
+                <div id="button_hard_skill_contact" class="button_dowload_cv" id="faleconoscobutton"
+                    onclick="goContactArt()">
+                    <div>
                         FALE COMIGO
                     </div>
                 </div>
@@ -240,8 +240,8 @@
             </div>
         </section>
     </article>
-    <article class="Justify_center _art_text" id="five_art">
-        <section>
+    <article class="Justify_center _art_text excpFinal1280" id="five_art">
+        <section class="sectExcp">
             <div class="max_width_1110">
                 <div class="container_title_desc">
                     <div>
@@ -254,16 +254,40 @@
                             BUSCA DE CONHECIMENTO TECNOLÓGICO*/
                         </p>
 
-                        <div class="_experience_school_div">
-                            <div class="_align_mid">
-                                <img src="Assets/imgs/imgs/103436-ome46h-3041.png" alt="">
-                            </div>
+                        <div class="_contact_div">
                             <div>
-                                <h2 style="font-weight: bold; text-align: start;margin-bottom: 2.5vh;">HISTÓRICO ESCOLAR
-                                </h2>
-                                <h4 style="font-weight: bold; margin-bottom: 2.5vh;">COTEMIG 2022 - 2024</h4>
-                                <p>Cursando Lógica e Programação, Front-End, Ambiente
-                                    Computacionais & Games </p>
+                                <div>
+                                    <h5>MANDE NOS UMA MENSAGEM</h5>
+                                    <form id="formContact">
+                                        <div>
+                                            <div style="grid-row: 1;" class="margin_bottom_inputs dFlexInput">
+                                                <label for="insertNumber">Telefone</label>
+                                                <input type="tel" name="inputTel" id="insertNumber" required>
+                                            </div>
+                                            <div style="grid-row: 2;" class="margin_bottom_inputs dFlexInput">
+                                                <label for="insertName">Nome</label>
+                                                <input type="text" name="inputName" id="insertName" required>
+                                            </div>
+                                            <div style="grid-row: 3;" class="margin_bottom_inputs dFlexInput">
+                                                <label for="insertEmail">Seu email</label>
+                                                <input type="email" name="inputEmail" id="insertEmail" required>
+                                            </div>
+                                            <div style="grid-row: 4;" class="dFlexInput">
+                                                <label for="insertNumber">Assunto</label>
+                                                <input type="text" name="inputTel" id="insertSubject" required>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; grid-row: 1/5;">
+                                                <label style="margin-left:3%; margin-bottom: 2vh;"
+                                                    for="mensagem">Mensagem</label>
+                                                <textarea name="inputTextAreaBody" id="mensagem" cols="30" required
+                                                    rows="10"></textarea>
+                                            </div>
+                                            <div>
+                                                <input type="submit" value="ENVIO">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
 
@@ -337,5 +361,13 @@
         </div>
     </div>
 </body>
-
+<script>
+    function goContactArt() {
+        document.getElementById('faleconoscobutton').addEventListener('click', () => {
+            var linkA = document.createElement('a')
+            linkA.href = "#five_art"
+            linkA.click();
+        })
+    }
+</script>
 </html>
