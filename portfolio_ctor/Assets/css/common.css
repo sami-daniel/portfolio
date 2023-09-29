@@ -41,7 +41,7 @@ body {
 
 ._snapper {
     display: grid;
-    grid-template-rows: 0.05fr 1fr;
+    
 }
 
 article {
@@ -295,8 +295,6 @@ section div:first-child h2{
 
 ._container_hard>div>div:nth-child(2) {
     grid-row: 1/3;
-    display: flex;
-    align-items: center;
 }
 
 #button_hard_skill {
