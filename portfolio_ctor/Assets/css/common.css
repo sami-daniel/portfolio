@@ -25,17 +25,12 @@ html {
     scroll-behavior: smooth !important;
 }
 
-body {
-    overflow-x: hidden;
-}
 
 a {
     color: currentColor;
 }
 
-body {
-    background-color: #9AC6D3;
-}
+
 
 ._snapper {
     display: grid;
@@ -191,9 +186,6 @@ section div:first-child h2 {
 }
 .button_dowload_cv:not(:hover){
     transition: 0.5s;
-}
-._text_informat>div:nth-child(1) {
-    position: relative;
 }
 
 ._text_informat>div {
@@ -631,9 +623,6 @@ input[type='tel'] {
     }
 }
 
-body {
-  background: #fff;
-}
 @keyframes scroll {
   100% {
     background-position: 0px -400%;
@@ -644,10 +633,41 @@ body{
     background: url('../imgs/imgs/black-glitch-effect-texture-background.jpg'),
     #111111;
     color: rgb(204, 204, 204);
+    overflow-x: hidden;
     background-size: 100%;
     background-position: 100%;
 }
 
+.custom-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+
+    background-size: 10px 10px;
+    background-position: -2px -2px, -2px -2px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    cursor: pointer;
+  }
+
+  .custom-range:hover {
+    opacity: 1;
+  }
+
+  .custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="4"/><line x1="50" y1="10" x2="50" y2="30" stroke="black" stroke-width="4"/><line x1="50" y1="70" x2="50" y2="90" stroke="black" stroke-width="4"/><line x1="10" y1="50" x2="30" y2="50" stroke="black" stroke-width="4"/><line x1="70" y1="50" x2="90" y2="50" stroke="black" stroke-width="4"/><line x1="29" y1="29" x2="43" y2="43" stroke="black" stroke-width="4"/><line x1="71" y1="29" x2="57" y2="43" stroke="black" stroke-width="4"/><line x1="29" y1="71" x2="43" y2="57" stroke="black" stroke-width="4"/><line x1="71" y1="71" x2="57" y2="57" stroke="black" stroke-width="4"/></svg>') no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+  
 /*https://img.freepik.com/free-vector/realistic-vhs-effect-background_23-2150087304.jpg?w=1380&t=st=1696353864~exp=1696354464~hmac=fab7aab3bb789c2217fc2d8feeb1d0417a152dc08450c964df9f0dbcf1a779da*/
 /*--https://img.freepik.com/free-photo/low-angle-tree-with-starry-night-sky_23-2148282336.jpg?w=1380&t=st=1696353889~exp=1696354489~hmac=708a9d97400f04fcb5ec1e0aef1c9506d4156e1b2c5b88f44d9c32e501d5abe3*/
 /*https://img.freepik.com/free-vector/vector-glitch-background-digital-image-data-distortion_1217-2116.jpg?w=826&t=st=1696353798~exp=1696354398~hmac=4b569712ec57049ed36daedb57de06cbcf8a57b93bebf8c3ccdc62c93a9c46e1*/
@@ -667,20 +687,17 @@ body{
 /*https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80*/
 
 /* Fallback if the operatring system prefers reduced motion*/
-@media (prefers-reduced-motion) {
-  body {
-    animation: scroll 800s linear infinite;
-  }
-}
 
-@media (min-width: 670px) {
+
+
+@media (min-width:670px) {
   .title {
     font-size: 5rem;
   }
 }
-
-@media screen and (min-width:768px) and (max-width:1023px){
-    .container_hard_skill > div img{
-        width: 85%;
+@media (max-width:320px){
+    body{
+       font-size: 5em;
+        background-repeat: no-repeat;
     }
 }
