@@ -345,25 +345,26 @@
             document.body.style.filter = `brightness(${brightnessValue}%)`;
         }
     });
-
     document.getElementById('insertNumber').addEventListener('input', () => {
-        let telIn = document.getElementById('insertNumber');
-        let telFormat = telIn.value;
+    let telIn = document.getElementById('insertNumber');
+    let telFormat = telIn.value;
 
-        telFormat = telFormat.replace(/\D/g, '');
+    telFormat = telFormat.replace(/\D/g, '');
 
-        if (telFormat.length > 0) {
-            telIn.value = `(${telFormat.substring(0, 2)}`;
+    if (telFormat.length > 0) {
+        telIn.value = `(${telFormat.substring(0, 2)}`;
 
-            if (telFormat.length > 2) {
-                telIn.value += `) ${telFormat.substring(2, 6)}`;
+        if (telFormat.length > 2) {
+            telIn.value += `) ${telFormat.substring(2, 7)}`;
 
-                if (telFormat.length > 6) {
-                    telIn.value += `-${telFormat.substring(6, 10)}`;
-                }
+            if (telFormat.length > 7) {
+                telIn.value += `-${telFormat.substring(7, 11)}`;
             }
         }
-    });
+    }
+});
+
+
     document.getElementById('insertName').addEventListener('input', () => {
     let input = document.getElementById('insertName');
     let value = input.value;
