@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,6 +8,7 @@
     font-family: 'Jost', sans-serif;
     text-decoration: none;
     list-style-type: none;
+
 }
 
 ._navmenu a {
@@ -83,7 +84,7 @@ header {
 }
 
 ._art_text {
-    padding: 0rem;
+    padding: 3rem;
     justify-content: center;
 }
 
@@ -112,7 +113,7 @@ section div:first-child h2 {
 }
 
 ._navmenu {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     z-index: 998;
@@ -150,18 +151,21 @@ section div:first-child h2 {
 }
 
 .logo_image {
+    margin-bottom: 8.15%;
     display: flex;
     justify-content: center;
-    margin-bottom: 8.15%;
 }
-._starter_lgtBox_hard{
+
+._starter_lgtBox_hard {
     cursor: pointer;
     transition: 0.5s;
 }
-._starter_lgtBox_hard:hover{
+
+._starter_lgtBox_hard:hover {
     transform: scale(1.05);
 }
-._starter_lgtBox_hard:not(:hover){
+
+._starter_lgtBox_hard:not(:hover) {
     transition: 0.5s;
 }
 
@@ -180,11 +184,13 @@ section div:first-child h2 {
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
-.button_dowload_cv:hover{
+
+.button_dowload_cv:hover {
     background-color: white;
     color: black;
 }
-.button_dowload_cv:not(:hover){
+
+.button_dowload_cv:not(:hover) {
     transition: 0.5s;
 }
 
@@ -280,23 +286,28 @@ section div:first-child h2 {
     margin: 0;
     width: 100%;
     grid-row: 2/5;
-    color: rgb(100, 50, 0); ;
+    color: rgb(100, 50, 0);
+    ;
 }
 
 #button_hard_skill_contact {
     margin: 0;
     width: 100%;
     background-color: #B1AF99;
-    color: rgb(100, 50, 0); ;
+    color: rgb(100, 50, 0);
+    ;
 }
-#button_hard_skill_contact:hover{
+
+#button_hard_skill_contact:hover {
     background-color: white;
     color: black;
     transition: 0.5s;
 }
-#button_hard_skill_contact:not(:hover){
+
+#button_hard_skill_contact:not(:hover) {
     transition: 0.5s;
 }
+
 .linguagens-bars {
     background-color: #E5D40F;
     border-radius: 50px;
@@ -344,7 +355,8 @@ section div:first-child h2 {
     z-index: 1000;
     overflow-y: auto;
 }
-._lightbox img{
+
+._lightbox img {
     max-height: 71vh;
 }
 
@@ -406,24 +418,7 @@ section div:first-child h2 {
     min-height: 226px;
 }
 
-@media (max-width:1280px) {
-    ._art_text {
-        padding: 3.5rem;
-    }
 
-    ._lightbox {
-        min-width: 95% !important;
-    }
-
-    .excpFinal1280 {
-        padding: 2.8rem;
-    }
-
-    .sectExcp {
-        margin-top: 1vh !important;
-
-    }
-}
 
 /*@media (min-width:2560px){
     ._art_text{
@@ -533,12 +528,14 @@ input[type='tel'] {
     margin: 0 auto;
     color: rgb(100, 50, 0);
 }
-._contact_div form input[type='submit']:hover{
+
+._contact_div form input[type='submit']:hover {
     background-color: white;
     color: black;
     transition: 0.5s;
 }
-._contact_div form input[type='submit']:not(:hover){
+
+._contact_div form input[type='submit']:not(:hover) {
     transition: 0.5s;
 }
 
@@ -624,14 +621,15 @@ input[type='tel'] {
 }
 
 @keyframes scroll {
-  100% {
-    background-position: 0px -400%;
-  }
+    100% {
+        background-position: 0px -400%;
+    }
 }
-body{
+
+body {
     animation: scroll 100s linear infinite;
     background: url('../imgs/imgs/black-glitch-effect-texture-background.jpg'),
-    #111111;
+        #111111;
     color: rgb(204, 204, 204);
     overflow-x: hidden;
     background-size: 100%;
@@ -643,7 +641,7 @@ body{
     appearance: none;
     width: 100%;
     height: 10px;
-
+    margin-left: 3vw;
     background-size: 10px 10px;
     background-position: -2px -2px, -2px -2px;
     border-radius: 5px;
@@ -652,13 +650,13 @@ body{
     -webkit-transition: .2s;
     transition: opacity .2s;
     cursor: pointer;
-  }
+}
 
-  .custom-range:hover {
+.custom-range:hover {
     opacity: 1;
-  }
+}
 
-  .custom-range::-webkit-slider-thumb {
+.custom-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 30px;
@@ -666,8 +664,8 @@ body{
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="4"/><line x1="50" y1="10" x2="50" y2="30" stroke="black" stroke-width="4"/><line x1="50" y1="70" x2="50" y2="90" stroke="black" stroke-width="4"/><line x1="10" y1="50" x2="30" y2="50" stroke="black" stroke-width="4"/><line x1="70" y1="50" x2="90" y2="50" stroke="black" stroke-width="4"/><line x1="29" y1="29" x2="43" y2="43" stroke="black" stroke-width="4"/><line x1="71" y1="29" x2="57" y2="43" stroke="black" stroke-width="4"/><line x1="29" y1="71" x2="43" y2="57" stroke="black" stroke-width="4"/><line x1="71" y1="71" x2="57" y2="57" stroke="black" stroke-width="4"/></svg>') no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
-  }
-  
+}
+
 /*https://img.freepik.com/free-vector/realistic-vhs-effect-background_23-2150087304.jpg?w=1380&t=st=1696353864~exp=1696354464~hmac=fab7aab3bb789c2217fc2d8feeb1d0417a152dc08450c964df9f0dbcf1a779da*/
 /*--https://img.freepik.com/free-photo/low-angle-tree-with-starry-night-sky_23-2148282336.jpg?w=1380&t=st=1696353889~exp=1696354489~hmac=708a9d97400f04fcb5ec1e0aef1c9506d4156e1b2c5b88f44d9c32e501d5abe3*/
 /*https://img.freepik.com/free-vector/vector-glitch-background-digital-image-data-distortion_1217-2116.jpg?w=826&t=st=1696353798~exp=1696354398~hmac=4b569712ec57049ed36daedb57de06cbcf8a57b93bebf8c3ccdc62c93a9c46e1*/
@@ -688,16 +686,151 @@ body{
 
 /* Fallback if the operatring system prefers reduced motion*/
 
+@media screen and (max-width:1136.7px) {
+    ._navmenu {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        left: 100%;
+    }
+    ._navmenu span {
+        font-family: 'Anton', sans-serif;
+        letter-spacing: .5vw;
+        font-weight: 500;
+        font-size: 2em;
+    }
 
+    input[type='range'] {
+        margin: 0;
+    }
 
-@media (min-width:670px) {
-  .title {
-    font-size: 5rem;
-  }
+    ._navmenu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    ._navmenu ul>li {
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    aside {
+        width: fit-content;
+        position: fixed;
+        left: calc(100% - 40px);
+        top: 1%;
+    }
 }
-@media (max-width:320px){
-    body{
-       font-size: 5em;
-        background-repeat: no-repeat;
+
+@media screen and (max-width: 853px) {
+
+    .button_dowload_cv {
+        min-width: 100%;
+    }
+
+    ._container_hard>div {
+        grid-template-columns: 1fr;
+    }
+
+    ._container_hard>div {
+        padding: 2.5rem;
+    }
+
+    #button_hard_skill,
+    #button_hard_skill_contact {
+        display: none;
+    }
+
+    ._start_light_box>h2 {
+        font-size: 1.5em;
+        min-width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    ._start_light_box>div {
+        width: 100%;
+    }
+
+    .container_hard_skill {
+        display: none;
+    }
+
+    ._start_light_box {
+        overflow: hidden;
+    }
+
+    p {
+        margin-bottom: 2.3rem;
+        text-align: center;
+    }
+
+    ._container_hard>div>div:last-child {
+        text-align: center;
+    }
+
+    .logo_image {
+        width: 35% !important;
+        margin-bottom: 15%;
+
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    article {
+        margin-bottom: 8vh;
+    }
+
+    .last_child_desc * {
+        display: none;
+
+    }
+
+    .last_child_desc {
+        height: 55vh;
+        background-size: 100% 100%;
+        background-color: white;
+    }
+
+    .testimonials>div:last-child {
+        display: grid;
+        gap: 2%;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .container_title_desc p {
+        text-align: justify;
+    }
+
+    ._contact_div {
+        margin-top: 10vh;
+    }
+
+    label {
+        text-align: center;
+    }
+
+    ._contact_div form>div {
+        display: block;
+    }
+
+    ._contact_div form input[type='text'],
+    input[type='email'],
+    input[type='tel'] {
+        width: 100%;
+    }
+
+    ._contact_div form>div>div:nth-child(5) {
+        margin-top: 7vh;
+    }
+
+    ._contact_div form>div>div:nth-child(6) {
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
     }
 }

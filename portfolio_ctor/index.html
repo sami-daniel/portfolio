@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header class="_navmenu" style="flex-direction: row;">
+    <header class="_navmenu" style="flex-direction: row; flex-wrap: nowrap;">
         <div class="container">
             <ul class="ul_selector">
                 <li>
@@ -43,6 +43,16 @@
             <input type="range" id="ranger" class="custom-range" min="0" max="100" value="50">
         </div>
     </header>
+    <aside>
+        <div>
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </div>
+    </aside>
     <div style="width: 100%; height: 5vh;"> </div>
     <article id="first_art" class="_snapper">
         <div style="margin-top: 5vh;">
@@ -206,7 +216,6 @@
                         <div class="_contact_div">
                             <div>
                                 <div>
-                                    <h5>MANDE NOS UMA MENSAGEM</h5>
                                     <form action="https://formsubmit.co/samidaniel125@gmail.com" method="post">
                                         <div>
                                             <div style="grid-row: 1;" class="margin_bottom_inputs dFlexInput">
@@ -328,6 +337,7 @@
         </div>
     </footer>
 </body>
+
 <script>
     function goContactArt() {
         document.getElementById('faleconoscobutton').addEventListener('click', () => {
@@ -345,34 +355,35 @@
             document.body.style.filter = `brightness(${brightnessValue}%)`;
         }
     });
+
     document.getElementById('insertNumber').addEventListener('input', () => {
-    let telIn = document.getElementById('insertNumber');
-    let telFormat = telIn.value;
+        let telIn = document.getElementById('insertNumber');
+        let telFormat = telIn.value;
 
-    telFormat = telFormat.replace(/\D/g, '');
+        telFormat = telFormat.replace(/\D/g, '');
 
-    if (telFormat.length > 0) {
-        telIn.value = `(${telFormat.substring(0, 2)}`;
+        if (telFormat.length > 0) {
+            telIn.value = `(${telFormat.substring(0, 2)}`;
 
-        if (telFormat.length > 2) {
-            telIn.value += `) ${telFormat.substring(2, 7)}`;
+            if (telFormat.length > 2) {
+                telIn.value += `) ${telFormat.substring(2, 7)}`;
 
-            if (telFormat.length > 7) {
-                telIn.value += `-${telFormat.substring(7, 11)}`;
+                if (telFormat.length > 7) {
+                    telIn.value += `-${telFormat.substring(7, 11)}`;
+                }
             }
         }
-    }
-});
+    });
 
 
     document.getElementById('insertName').addEventListener('input', () => {
-    let input = document.getElementById('insertName');
-    let value = input.value;
+        let input = document.getElementById('insertName');
+        let value = input.value;
 
-    if (value.length > 0) {
-        input.value = value.charAt(0).toUpperCase() + value.slice(1);
-    }
-});
+        if (value.length > 0) {
+            input.value = value.charAt(0).toUpperCase() + value.slice(1);
+        }
+    });
 
 
 </script>
