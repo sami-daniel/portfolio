@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Sami Daniel Santos Silva</title>
     <meta name="author" content="Sami Daniel Santos Silva">
-    <meta name='viewport' content='width=device-width, initial-scale=0.9'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/common.css">
@@ -15,6 +15,8 @@
     <script defer src="Assets/scripts/showCv.js"></script>
     <script async src="Assets/scripts/menuConfig.js"></script>
     <script defer src="Assets/scripts/start_a.js"></script>
+    <script defer src="Assets/scripts/masksLimiters.js"></script>
+    <script defer src="Assets/scripts/btnMenuConfigs.js"></script>
 </head>
 
 <body>
@@ -73,22 +75,17 @@
                     <h6><a style="text-decoration: underline;" href="#five_art">samidaniel125@gmail.com</a></h6>
 
                     <p>Sami, um aluno do Ensino Médio apaixonado por programação, está determinado a encontrar um
-                        estágio que lhe permita aplicar sua exímia dedicação e sua inesgotável sede de aprendizado.
-                        Ele
-                        possui um conhecimento considerável em frameworks, HTML5 e CSS3, mas é em C# que ele se
-                        destaca,
-                        dedicando a maior parte de seu tempo. Sami está ansioso por uma oportunidade de estágio onde
-                        possa demonstrar seu valor e aplicar o conhecimento que acumulou ao longo do tempo. Ele
-                        acredita
-                        firmemente que sua abordagem inovadora e comprometida pode fazer uma contribuição
-                        significativa
-                        para qualquer empresa disposta a lhe dar uma chance. Sua paixão pela programação é evidente
-                        não
-                        apenas em sua habilidade técnica, mas também em seu entusiasmo em resolver problemas e
-                        encontrar
-                        soluções criativas. Sami está pronto para abraçar novos desafios e comprometer-se plenamente
-                        com
-                        seu crescimento profissional na área de programação.</p>
+                        estágio que lhe permita aplicar sua exímia dedicação e sua inesgotável sede de aprendizado. Ele
+                        possui um conhecimento considerável em frameworks,
+                        HTML5 e CSS3, mas é em C# que ele se destaca, dedicando a maior parte de seu tempo. Sami está
+                        ansioso por uma oportunidade de estágio onde possa demonstrar seu valor e aplicar o conhecimento
+                        que acumulou ao longo do tempo. Ele
+                        acredita firmemente que sua abordagem inovadora e comprometida pode fazer uma contribuição
+                        significativa para qualquer empresa disposta a lhe dar uma chance. Sua paixão pela programação é
+                        evidente não apenas em sua habilidade técnica,
+                        mas também em seu entusiasmo em resolver problemas e encontrar soluções criativas. Sami está
+                        pronto para abraçar novos desafios e comprometer-se plenamente com seu crescimento profissional
+                        na área de programação.</p>
 
                     <div class="button_dowload_cv dowload_button">
                         <span>BAIXAR CURRICULO</span>
@@ -115,7 +112,7 @@
                 </div>
                 <div>
                     <div id="button_hard_skill" class="button_dowload_cv dowload_button">
-                        BAIXAR CURRICULO
+                        VER CURRICULO
                     </div>
                 </div>
                 <div class="container container_hard_skill">
@@ -141,8 +138,7 @@
                     </div>
                     <div>
                         <p style="margin-bottom: 2.5vh;">/*NESSA SEÇÃO PODE ENCONTRAR-SE A PRÉVIA DE ALGUNS PROJETOS QUE
-                            FORAM FEITOS E QUE SUAS
-                            VERSOES PODEM SER ENCOTNRADAS NO GITHUB ATRAVÉS DO LINK <a
+                            FORAM FEITOS E QUE SUAS VERSOES PODEM SER ENCOTNRADAS NO GITHUB ATRAVÉS DO LINK <a
                                 href="https://github.com/sami-daniel?tab=repositories&q=&type=&language=html&sort="><span>github.com/sami-daniel</span></a>*/
                         </p>
                     </div>
@@ -340,52 +336,10 @@
 
 <script>
     function goContactArt() {
-        document.getElementById('faleconoscobutton').addEventListener('click', () => {
-            var linkA = document.createElement('a')
-            linkA.href = "#five_art"
-            linkA.click();
-        })
+        var linkA = document.createElement('a')
+        linkA.href = "#five_art"
+        linkA.click();
     }
-
-    const brightnessRange = document.getElementById('ranger');
-    brightnessRange.value = 100
-    brightnessRange.addEventListener('input', function () {
-        const brightnessValue = brightnessRange.value;
-        if (brightnessValue > 25) {
-            document.body.style.filter = `brightness(${brightnessValue}%)`;
-        }
-    });
-
-    document.getElementById('insertNumber').addEventListener('input', () => {
-        let telIn = document.getElementById('insertNumber');
-        let telFormat = telIn.value;
-
-        telFormat = telFormat.replace(/\D/g, '');
-
-        if (telFormat.length > 0) {
-            telIn.value = `(${telFormat.substring(0, 2)}`;
-
-            if (telFormat.length > 2) {
-                telIn.value += `) ${telFormat.substring(2, 7)}`;
-
-                if (telFormat.length > 7) {
-                    telIn.value += `-${telFormat.substring(7, 11)}`;
-                }
-            }
-        }
-    });
-
-
-    document.getElementById('insertName').addEventListener('input', () => {
-        let input = document.getElementById('insertName');
-        let value = input.value;
-
-        if (value.length > 0) {
-            input.value = value.charAt(0).toUpperCase() + value.slice(1);
-        }
-    });
-
-
 </script>
 
 </html>

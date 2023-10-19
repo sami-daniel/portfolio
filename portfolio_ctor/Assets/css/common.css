@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,7 +7,6 @@
     font-family: 'Jost', sans-serif;
     text-decoration: none;
     list-style-type: none;
-
 }
 
 ._navmenu a {
@@ -26,16 +24,12 @@ html {
     scroll-behavior: smooth !important;
 }
 
-
 a {
     color: currentColor;
 }
 
-
-
 ._snapper {
     display: grid;
-
 }
 
 article {
@@ -174,7 +168,9 @@ section div:first-child h2 {
     width: 25%;
     margin-top: 3vh;
     text-align: center;
-    line-height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 5vh;
     font-weight: 700;
     border-radius: 30px;
@@ -183,6 +179,7 @@ section div:first-child h2 {
     color: rgb(100, 50, 0);
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    max-height: 50px;
 }
 
 .button_dowload_cv:hover {
@@ -384,7 +381,7 @@ section div:first-child h2 {
     justify-content: center;
     position: fixed;
     top: 0;
-    left: 96.3%;
+    left: calc(100% - 50px);
     background-color: white;
 }
 
@@ -419,7 +416,6 @@ section div:first-child h2 {
 }
 
 
-
 /*@media (min-width:2560px){
     ._art_text{
         align-items: unset;
@@ -429,6 +425,7 @@ section div:first-child h2 {
     }
 }
 */
+
 .max_width_1110 {
     max-width: 1100px;
 }
@@ -437,7 +434,9 @@ section div:first-child h2 {
     margin-top: 10vh;
 }
 
+
 /*Possivel cor: #008F8C*/
+
 .square_testimonials>p {
     font-size: 14px;
 }
@@ -489,7 +488,6 @@ section div:first-child h2 {
     font-weight: 900;
 }
 
-
 ._contact_div form input[type='text'],
 input[type='email'],
 input[type='tel'] {
@@ -512,7 +510,6 @@ input[type='tel'] {
     width: 100%;
 }
 
-
 .margin_bottom_inputs {
     margin-bottom: 5vh;
 }
@@ -527,6 +524,7 @@ input[type='tel'] {
     font-weight: 900;
     margin: 0 auto;
     color: rgb(100, 50, 0);
+    max-height: 80px;
 }
 
 ._contact_div form input[type='submit']:hover {
@@ -543,7 +541,6 @@ input[type='tel'] {
     display: flex;
     flex-direction: column;
 }
-
 
 ._contact_div textarea {
     resize: vertical;
@@ -573,48 +570,37 @@ input[type='tel'] {
     text-align: center;
 }
 
-
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
-
     10% {
         transform: rotate(36deg);
     }
-
     20% {
         transform: rotate(72deg);
     }
-
     30% {
         transform: rotate(108deg);
     }
-
     40% {
         transform: rotate(144deg);
     }
-
     50% {
         transform: rotate(180deg);
     }
-
     60% {
         transform: rotate(216deg);
     }
-
     70% {
         transform: rotate(252deg);
     }
-
     80% {
         transform: rotate(288deg);
     }
-
     90% {
         transform: rotate(324deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -628,8 +614,7 @@ input[type='tel'] {
 
 body {
     animation: scroll 100s linear infinite;
-    background: url('../imgs/imgs/black-glitch-effect-texture-background.jpg'),
-        #111111;
+    background: url('../imgs/imgs/black-glitch-effect-texture-background.jpg'), #111111;
     color: rgb(204, 204, 204);
     overflow-x: hidden;
     background-size: 100%;
@@ -643,7 +628,6 @@ body {
     height: 10px;
     margin-left: 3vw;
     background-size: 10px 10px;
-    background-position: -2px -2px, -2px -2px;
     border-radius: 5px;
     outline: none;
     opacity: 0.7;
@@ -666,32 +650,70 @@ body {
     cursor: pointer;
 }
 
+
 /*https://img.freepik.com/free-vector/realistic-vhs-effect-background_23-2150087304.jpg?w=1380&t=st=1696353864~exp=1696354464~hmac=fab7aab3bb789c2217fc2d8feeb1d0417a152dc08450c964df9f0dbcf1a779da*/
+
+
 /*--https://img.freepik.com/free-photo/low-angle-tree-with-starry-night-sky_23-2148282336.jpg?w=1380&t=st=1696353889~exp=1696354489~hmac=708a9d97400f04fcb5ec1e0aef1c9506d4156e1b2c5b88f44d9c32e501d5abe3*/
+
+
 /*https://img.freepik.com/free-vector/vector-glitch-background-digital-image-data-distortion_1217-2116.jpg?w=826&t=st=1696353798~exp=1696354398~hmac=4b569712ec57049ed36daedb57de06cbcf8a57b93bebf8c3ccdc62c93a9c46e1*/
+
+
 /*https://img.freepik.com/free-photo/pixelated-abstract-pattern-futuristic-error-message-computer-generative-ai_188544-19492.jpg?w=1380&t=st=1696353791~exp=1696354391~hmac=63d383a39668333309e237d89c810c30bdeaef05d77d610509c897cf17537d9a*/
+
+
 /*https://img.freepik.com/free-photo/technology-internet-big-data-background_1387-1011.jpg?w=996&t=st=1696353625~exp=1696354225~hmac=cf96e278513aeae1e7562f6e67ba45fd79c63401053414cabb5fb50ffe6b93ea*/
+
+
 /*https://img.freepik.com/free-photo/black-glitch-effect-texture-background_53876-102440.jpg?w=1380&t=st=1696353617~exp=1696354217~hmac=d83aa6988712c726dadc778d734e35dc7ae69142e1cb8c11c81067ef78ab7b84*/
+
+
 /*https://img.freepik.com/free-photo/glitter-texture-background_23-2148110702.jpg?w=1380&t=st=1696353612~exp=1696354212~hmac=00164023b49701decb684629e4650e46b47622b557d73e1221da9078c306213c*/
+
+
 /*https://img.freepik.com/free-photo/double-color-exposure-paint-brush-abstract-background_53876-102742.jpg?w=1380&t=st=1696353607~exp=1696354207~hmac=1cdd6b18777d8bd0b8b40f46bc6f5afacf7aae4fbf4b9247cd087367b2067816*/
+
+
 /*https://img.freepik.com/free-photo/abstract-geometric-background-shapes-texture_1194-301821.jpg?w=826&t=st=1696353603~exp=1696354203~hmac=536036934674ce4219de3a33daef2fb89ebfcffd44c4f533ba5fab7e7c8dc2b2*/
+
+
 /*https://img.freepik.com/free-photo/abstract-geometric-background-shapes-texture_1194-301821.jpg?w=826&t=st=1696353603~exp=1696354203~hmac=536036934674ce4219de3a33daef2fb89ebfcffd44c4f533ba5fab7e7c8dc2b2*/
+
+
 /*https://previews.123rf.com/images/stevanovicigor/stevanovicigor1410/stevanovicigor141000237/33042323-abstract-computer-programming-code-as-technology-background.jpg*/
+
+
 /*https://history-computer.com/wp-content/uploads/2023/03/shutterstock_1805228101-scaled.jpg*/
+
+
 /*https://cdn.allaboutcookies.org/images/2022/06/24/static-ip-vs-dynamic-ip.jpg*/
+
+
 /*https://img.freepik.com/free-vector/realistic-vhs-effect-background_23-2150087304.jpg*/
+
+
 /*https://png.pngtree.com/background/20220727/original/pngtree-glitch-vhs-distortion-screen-vector-background-of-video-glitch-effect-with-picture-image_1840788.jpg*/
+
+
 /*'https://andreivictor.ro/codepen/scroll-bg-animation-pinterest/bg_pasta_grid-3f880df3.jpg'*/
+
+
 /*https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80*/
 
-/* Fallback if the operatring system prefers reduced motion*/
 
+/* Fallback if the operatring system prefers reduced motion*/
+aside{
+    display: none;
+}
 @media screen and (max-width:1136.7px) {
     ._navmenu {
         width: 100%;
         height: 100vh;
         position: relative;
         left: 100%;
+        transition: 1s;
+        border-radius: 0;
     }
     ._navmenu span {
         font-family: 'Anton', sans-serif;
@@ -699,135 +721,128 @@ body {
         font-weight: 500;
         font-size: 2em;
     }
-
     input[type='range'] {
         margin: 0;
     }
-
     ._navmenu ul {
         flex-direction: column;
         padding: 0;
     }
-
     ._navmenu ul>li {
         margin-bottom: 5vh;
         text-align: center;
     }
-
     aside {
         width: fit-content;
         position: fixed;
         left: calc(100% - 40px);
         top: 1%;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    .overlay {
+        display: none;
+        visibility: hidden;
+    }
+    ._lightbox {
+        display: none;
+        visibility: hidden;
+    }
+    .overlay.entry_overlay {
+        display: none;
+        visibility: hidden;
+    }
+    ._lightbox.entry_ligth_configs {
+        display: none;
+        visibility: hidden;
     }
 }
 
 @media screen and (max-width: 853px) {
-
     .button_dowload_cv {
         min-width: 100%;
     }
-
     ._container_hard>div {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: inherit;
     }
-
     ._container_hard>div {
         padding: 2.5rem;
     }
-
     #button_hard_skill,
     #button_hard_skill_contact {
         display: none;
     }
-
     ._start_light_box>h2 {
         font-size: 1.5em;
         min-width: 100%;
         overflow: hidden;
         text-align: center;
     }
-
     ._start_light_box>div {
         width: 100%;
     }
-
     .container_hard_skill {
         display: none;
     }
-
     ._start_light_box {
         overflow: hidden;
     }
-
     p {
         margin-bottom: 2.3rem;
         text-align: center;
     }
-
     ._container_hard>div>div:last-child {
         text-align: center;
     }
-
     .logo_image {
         width: 35% !important;
         margin-bottom: 15%;
-
     }
-
     h2 {
         text-align: center;
         margin-bottom: 2vh;
     }
-
     article {
         margin-bottom: 8vh;
     }
-
     .last_child_desc * {
         display: none;
-
     }
-
     .last_child_desc {
         height: 55vh;
-        background-size: 100% 100%;
         background-color: white;
+        background: url('../imgs/imgs/banner_tablet.jpg'), #111111;
+        background-size: cover;
     }
-
     .testimonials>div:last-child {
         display: grid;
         gap: 2%;
         grid-template-columns: auto;
         grid-template-rows: auto;
     }
-
     .container_title_desc p {
         text-align: justify;
     }
-
     ._contact_div {
         margin-top: 10vh;
     }
-
     label {
         text-align: center;
     }
-
     ._contact_div form>div {
         display: block;
     }
-
     ._contact_div form input[type='text'],
     input[type='email'],
     input[type='tel'] {
         width: 100%;
     }
-
     ._contact_div form>div>div:nth-child(5) {
         margin-top: 7vh;
     }
-
     ._contact_div form>div>div:nth-child(6) {
         margin-top: 5vh;
         display: flex;
