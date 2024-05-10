@@ -12,6 +12,9 @@ namespace Portfolio
             app.UseStaticFiles(); 
 
             app.UseRouting();
+
+            app.MapRazorPages();
+
             app.Run();
         }
     }
