@@ -5,15 +5,13 @@
 }
 
 .bg-main-color {
-    background-color: #520dc2;
+    background-color: #6100FF;
 }
 
 .text-main-color {
-    color: #520dc2;
+    color: #6100FF;
 }
-.custom-image-border {
-    border: 3px solid #6100FF;
-}
+
 .icon {
     -moz-transition: .5s;
     -o-transition: .5s;
@@ -40,17 +38,39 @@
         width: 80%;
         height: 1px;
         position: absolute;
-        background-color: white;
+        background-color: #9b9b9b;
         left: 10%;
-        bottom: -10%;
-    }
-
-    .separator::after {
-        
+        bottom: -19%;
     }
 
 .text-justify {
     text-align: justify;
+}
+
+.content-sect {
+    font-size: 14px;
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+    .timeline-item::after {
+        content: "";
+        width: 1px;
+        height: 80%;
+        position: absolute;
+        background-color: #9b9b9b;
+        left: 125%;
+        top: 23%
+    }
+
+.fs-15 {
+    font-size: 15px;
 }
 
 @keyframes iconanimation {
