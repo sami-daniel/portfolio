@@ -9,5 +9,15 @@
         "css/all.min.css"
       ]
     }
+  ,
+{
+  "provider": "cdnjs",
+  "library": "bootstrap@5.3.3",
+  "destination": "wwwroot/libs/bootstrap/",
+  "files": [
+    "js/bootstrap.min.js",
+    "css/bootstrap.min.css"
+  ]
+}
   ]
 }
